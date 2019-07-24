@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "SelectOutcomes";
+}
+@model PRP321MVC.Models.QuestionsSelectionModel
+
+@using (Html.BeginForm("FinishUp", "Generator", "Post"))
+{
+
+    List<SelectListItem> selectLists = new List<SelectListItem>();
+
+    foreach (PRP321MVC.Models.OutcomeDetailsModel item in Model.outcomeDetailsListRelavent)
+    {
+        selectLists.Add(new SelectListItem { Text = item.Material, Value = item.Material });
+    }
+
+    for (int i = 0; i < Model.NumberOfQuestions; i++)
+    {
+        <br />
+        <label name="QuestionType" + i>@Model.TypesOfQuestion[i]</label>
+
+        <br />
+
+        <input type="number" name="NumberOFQuestionsPerQuestion @i" min="1" max="200" value="1">
+
+        <br />
+
+        
+
+        @Html.DropDownList("OutcomeChoosen"+i,selectLists)
+        <br />
+    }
+
+    <button type="submit" >Finish Up</button>
+
+
+    @*for (int i = 0; i < Model.NumberOfQuestions; i++)
+        {
+
+                    <label name="QuestionType" + i>@Model.TypesOfQuestion[i]</label>
+            Html.Label("QuestionType" + i, new { value = Model.TypesOfQuestion[i] });
+
+                    <input type="number" name="NumberOFQuestionsPerQuestion + @i" min="1" max="200" value="1">
+
+            foreach (PRP321MVC.Models.OutcomeModel item in Model.outcomesList)
+            {
+                Html.Label(item.OutcomeName, new { value = item.OutcomeName });<br />
+
+                for (int j = 0; i < Model.outcomeDetailsList.Capacity; i++)
+                {
+                    if (item.OutcomeId == Model.outcomeDetailsList[j].OutcomeId)
+                    {
+                        //Html.CheckBox(item2.Material + i, new { value = item2.Material });
+
+                        Html.CheckBoxFor(m => Model.isSelected);
+                                @Model.QuestionsSelectionModelsList[j].outcomeDetails= Model.outcomeDetailsList[j];
+                                @Model.QuestionsSelectionModelsList[j].outcome= item; <br />
+
+                    }
+                }
+            }*@
+}
+
+@*foreach (PRP321MVC.Models.OutcomeDetailsModel item2 in Model.outcomeDetailsList)
+    {
+        if (item.OutcomeId == item2.OutcomeId)
+        {
+            //Html.CheckBox(item2.Material + i, new { value = item2.Material });
+
+            Html.CheckBoxFor(m => Model.isSelected);
+            @Model.QuestionsSelectionModelsList.outcomeDetails= item2;
+            @Model.QuestionsSelectionModelsList.outcome= item; <br />
+
+        }
+    }
+        }*@
+
+
+

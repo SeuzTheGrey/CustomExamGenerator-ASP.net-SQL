@@ -1,0 +1,12 @@
+E:\Third Year Project\PRP321MVC\PRP321MVC\DataAccess\bin\Debug\DataAccess.dll
+E:\Third Year Project\PRP321MVC\PRP321MVC\DataAccess\bin\Debug\DataAccess.pdb
+E:\Third Year Project\PRP321MVC\PRP321MVC\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+E:\Third Year Project\PRP321MVC\PRP321MVC\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+E:\Third Year Project\PRP321MVC\PRP321MVC\DataAccess\obj\Debug\DataAccess.dll
+E:\Third Year Project\PRP321MVC\PRP321MVC\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Schalk\Source\Repos\PRP321MVC\PRP321MVC\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Schalk\Source\Repos\PRP321MVC\PRP321MVC\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Schalk\Source\Repos\PRP321MVC\PRP321MVC\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\Schalk\Source\Repos\PRP321MVC\PRP321MVC\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Schalk\Source\Repos\PRP321MVC\PRP321MVC\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Schalk\Source\Repos\PRP321MVC\PRP321MVC\DataAccess\obj\Debug\DataAccess.pdb

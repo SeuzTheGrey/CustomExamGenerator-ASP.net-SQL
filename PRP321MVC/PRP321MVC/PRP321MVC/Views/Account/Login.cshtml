@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+@model PRP321MVC.Models.LecturerModel
+@Styles.Render("~/Content/CustomStyles/Login.css")
+<section>
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        <section class="form-group">
+            <label for="Username">Username</label>
+            <br />
+            @Html.TextBoxFor(model => model.Username, new { Name = "Username" })
+            @Html.ValidationMessageFor(model => model.Username)
+            <br />
+            <label for="Password">Password</label>
+            <br />
+            @Html.PasswordFor(model => model.Password, new { Name = "Password" })
+            @Html.ValidationMessageFor(model => model.Password)
+            <br />
+            <button type="submit"  class="btn-group-vertical" >Login</button>
+            @*<input type="submit" class="btn-group-vertical" value="Login" />*@
+            <br />
+            @Html.ActionLink("Forgot Password", "ForgotPasswordEmail", "Account","GET", new { @class = "btn-group-vertical" })
+        </section>
+    }
+</section>
+

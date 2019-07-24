@@ -1,0 +1,13 @@
+{
+  "User": {
+    "Id": 2555023,
+    "Username": "SeuzTheGrey",
+    "Name": "Seuz",
+    "Email": "seuzrulz@gmail.com",
+    "AvatarUrl": "https://secure.gravatar.com/avatar/d861d839cf015da98fb3d84df03c3f05?s=80&d=identicon",
+    "PrivateToken": "59f16262b12a71c8460c288bf7bdd89c37b0c1fa22cdfba8ca24e42e0b5e5b30",
+    "Host": "https://gitlab.com",
+    "TwoFactorEnabled": false,
+    "ApiVersion": 3
+  }
+}

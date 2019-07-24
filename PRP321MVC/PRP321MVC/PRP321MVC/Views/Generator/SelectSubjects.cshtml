@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "SelectSubjects";
+}
+
+@model IEnumerable<PRP321MVC.Models.SubjectModel>
+
+<section id="examCreation" class="card">
+    @using (Html.BeginForm("SelectTestNumber", "Generator", "POST"))
+    {
+        <p>Select a Subject:</p>
+        <select id="slctSubject" title="Subject" name="Subject" >
+
+            @foreach (var item in Model)
+            {
+
+                <option>@item.Name</option>
+
+            }
+        </select>
+        <br />
+        <button type="submit">Submit Subject</button>
+    }
+</section>
+
+
+
+

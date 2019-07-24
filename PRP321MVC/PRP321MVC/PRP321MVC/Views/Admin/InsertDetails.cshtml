@@ -1,0 +1,86 @@
+﻿@model PRP321MVC.Models.QuestionModel
+
+@{
+    ViewBag.Title = "InsertDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>InsertDetails</h2>
+
+@using (Html.BeginForm())
+{
+    List<SelectListItem> selectLists = new List<SelectListItem>();
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>@Html.TextBoxFor(x => x.Questions)</td>
+        </tr>
+        <tr>
+            <td>Outcome Details ID</td>
+            <td>
+
+
+                @{
+                    List<SelectListItem> listItems = new List<SelectListItem>();
+                    listItems.Add(new SelectListItem
+                    {
+                        Text = "Calculas",
+                        Value = "2"
+                    });
+                    listItems.Add(new SelectListItem
+                    {
+                        Text = "Exemplo2",
+                        Value = "Exemplo2",
+                        Selected = true
+                    });
+                    listItems.Add(new SelectListItem
+                    {
+                        Text = "Exemplo3",
+                        Value = "Exemplo3"
+                    });
+                }
+
+                @Html.DropDownListFor(x => x.OutcomeDetailsId, listItems, "-- Select Status --")
+
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>Question Type ID</td>
+            @{
+                List<SelectListItem> questiontypes = new List<SelectListItem>();
+                questiontypes.Add(new SelectListItem
+                {
+                    Text = "True/False",
+                    Value = "1"
+                });
+
+            }
+
+            @Html.DropDownListFor(x => x.QuestionTypeId, listItems, "-- Select Status --")
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>@Html.TextAreaFor(x => x.Weight)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input id="Submit" type="submit" value="submit" /></td>
+        </tr>
+    </table>
+}
+
+@{
+    if ((string)ViewData["result"] == "Successfully Inserted")
+    {
+        <script type="text/javascript" language="javascript">
+            alert("Successfully Inserted")
+        </script>
+    }
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Admin", "Admin")
+</div>

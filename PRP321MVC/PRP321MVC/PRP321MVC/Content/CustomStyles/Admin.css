@@ -1,0 +1,11 @@
+﻿section a {
+    border: 0.1px solid gray;
+    position: relative;
+    border-radius: 0;
+    padding: 8.1px 10px;
+    height: 30%;
+    letter-spacing: .1em;
+    background: #13232f;
+    color: #c1bdba;
+    right: -5px;
+}

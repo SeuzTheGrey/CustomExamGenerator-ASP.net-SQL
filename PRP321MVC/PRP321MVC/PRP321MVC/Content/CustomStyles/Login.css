@@ -1,0 +1,50 @@
+﻿section form {
+    font-family: 'Titillium Web', sans-serif;
+    position: relative;
+    left: 15%;
+    margin-top: 10%;
+}
+
+form section label {
+    margin-bottom: 0%;
+}
+
+
+form section input {
+    position: relative;
+}
+
+
+section form section input {
+    font-size: 22px;
+    display: inline;
+    width: 300px;
+    height: 30%;
+    padding: 5px 10px;
+    color: black;
+    border-radius: 0;
+}
+
+section form button {
+    border: 0.1px solid gray;
+    position: relative;
+    border-radius: 0;
+    padding: 5px 10px;
+    height: 30%;
+    width: 300px;
+    letter-spacing: .1em;
+    background: #13232f;
+    color: #c1bdba;
+}
+
+section form a {
+    border: 0.1px solid gray;
+    position: relative;
+    border-radius: 0;
+    padding: 5px 10px;
+    height: 30%;
+    width: 300px;
+    letter-spacing: .1em;
+    background: #13232f;
+    color: #c1bdba;
+}

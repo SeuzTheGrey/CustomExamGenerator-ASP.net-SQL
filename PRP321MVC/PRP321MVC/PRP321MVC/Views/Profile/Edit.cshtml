@@ -1,0 +1,77 @@
+﻿@model PRP321MVC.Models.LecturerModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+@Styles.Render("~/Content/CustomStyles/Register.css")
+<section>
+    @using (Html.BeginForm("Edit", "Profile", "Post"))
+    {
+        <section class="form-row Section">
+            <section class="form-group col-md-6">
+                @Html.DisplayNameFor(Model => Model.Username)<br />
+                <input type="text" placeholder="Username" name="Username" value="@Model.Username" />
+            </section>
+            <section class="form-group col-md-6">
+                @Html.DisplayNameFor(Model => Model.Password)<br />
+                <input type="password" placeholder="Password" name="Password" value="@Model.Password" />
+            </section>
+        </section>
+        <section class="form-row Section">
+            <section class="form-group col-md-6">
+                <label>Account Priority:</label><input type="number" min="1" max="20" value="@Model.Priority" name="Priority" disabled />
+            </section>
+            <section class="form-group col-md-6">
+
+                @if (Model.IsAdmin == 1)
+                {
+                    <label>Is Adminstrator:</label><input type="checkbox" checked value=1 name="Adminstrator" disabled />
+                }
+                else
+                {
+                    <label>Is Adminstrator:</label><input type="checkbox" value=0 name="Adminstrator" disabled />
+                }
+            </section>
+
+        </section>
+
+        <section id="OptionalHeader">
+
+            <label>Additional Data</label>
+
+        </section>
+
+        <section class="form-row Section">
+            <section class="form-group col-md-6">
+                @Html.DisplayNameFor(Model => Model.Name)<br />
+                <input type="text" placeholder="First Name" name="FirstName" value="@Model.Name" />
+            </section>
+            <section class="form-group col-md-6">
+                @Html.DisplayNameFor(Model => Model.Surname)<br />
+                <input type="text" placeholder="Last Name" name="LastName" value="@Model.Surname" />
+            </section>
+        </section>
+        <section class="form-row Section">
+            <section class="form-group col-md-6">
+                <label>Professional Level</label><br /><input type="number" min="1" max="20" value="@Model.Level" name="ProfessionalLevel" />
+            </section>
+            <section class="form-group col-md-6">
+                @Html.DisplayNameFor(Model => Model.Cell)
+                <input type="text" placeholder="Phone Number" name="Phone" value="@Model.Cell" />
+            </section>
+        </section>
+        <section class="form-row Section">
+            <section class="form-group col-md-6">
+                @Html.DisplayNameFor(Model => Model.Email)
+                <input type="text" placeholder="Email" name="Email" value="@Model.Email" />
+            </section>
+        </section>
+        <button id="Button" type="submit">Enter</button>
+        @Html.ActionLink("Back", "Index", "Home")
+    }
+</section>
+<br />
+
+
+
+

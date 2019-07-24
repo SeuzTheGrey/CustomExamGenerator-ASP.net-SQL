@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+@{
+    OnlineExamGenerator.Models.Lecturer lecturer = Session["USER"] as OnlineExamGenerator.Models.Lecturer;
+}
+<body>
+    <header>
+        <h1>
+            Online Exam Generator
+        </h1>
+    </header>
+
+    <ul class="navbar justify-content-center">
+        <li class="nav-item">
+            @Html.ActionLink("Home", "Index", "Home")
+        </li>
+        @if (Session["USER"] != null)
+        {
+            <li class="nav-item">
+                @Html.ActionLink("Profile", "Edit", "Profile")
+            </li>
+        }
+        @if (Session["USER"] == null)
+        {
+            <li class="nav-item">
+                @Html.ActionLink("Login", "Login", "Account")
+            </li>
+        }
+        @if (Session["USER"] != null)
+        {
+            if (lecturer.Priority >= 7)
+            {
+                <li class="nav-item">
+                    @Html.ActionLink("Exam", "Create", "Generator")
+                </li>
+            }
+        }
+
+        @if (Session["USER"] != null)
+        {
+            if (lecturer.IsAdmin == 1)
+            {
+                <li class="nav-item">
+                    @Html.ActionLink("Admin", "Admin", "Admin")
+                </li>
+            }
+        }
+        @if (Session["USER"] != null)
+        {
+            <li class="nav-item">
+                @Html.ActionLink("Logout", "Logout", "Account")
+            </li>
+        }
+
+
+    </ul>
+
+
+
+    <section class="d-flex justify-content-center align-items-center container CenterStuff ">
+        @RenderBody()
+    </section>
+
+    <footer></footer>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

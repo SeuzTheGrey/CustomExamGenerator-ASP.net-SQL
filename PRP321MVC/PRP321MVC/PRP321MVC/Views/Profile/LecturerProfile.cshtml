@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "LecturerProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model PRP321MVC.Models.LecturerModel
+@using (Html.BeginForm())
+{
+
+    <div class="container">
+        <div class="form-group">
+            <h2>LecturerProfile</h2>
+        </div>
+        <br />
+        <div class="form-group">
+            <h2>
+                Hello
+                <Label ID="userLabel" title="no user"></Label>
+                Welcome to Profile
+            </h2>
+        </div>
+        <br />
+        <div class="form-group">
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </div>
+        <br />
+        <div class="form-group">
+            <section>
+                <div class="form-group">
+                    <br />
+                    <fieldset>
+
+                        <legend><img alt="" src="person-flat.png" width="100" /></legend>
+                        <div>
+                            <label>Name:</label>
+
+                            <input class="form-control" name="txtName" placeholder="Enter Name" />
+
+                        </div>
+                        <br />
+
+                        <div class="form-group">
+                            <label>Surname:</label>
+                            <input class="form-control" name="txtSurname" placeholder="Enter Surname" />
+
+
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label>Account Id:</label>
+
+                            <input class="form-control" name="txtEmployeeNumber" placeholder="Enter staff id" />
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <input id="cvUpload" type="file" />
+                            <br />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+
+                            <label>Current Course</label>
+
+                            <select id="txtStxtCourseubject">
+                                <option>--Please Select--</option>
+                                <option>BIT Information Technology</option>
+                                <option>DIP Diploma</option>
+                                <option>BCOM Computing</option>
+                                <option>PostGraduate Programme</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Current Subject:</label>
+                            <select id="txtSubject">
+                                <option>--Please Select--</option>
+                                <option>BUM121 </option>
+                                <option>INF121 </option>
+                                <option>DBD121 </option>
+                                <option>MAT121 </option>
+                                <option>PRG121 </option>
+                                <option>ORS121 </option>
+                                <option>INS121 </option>
+                                <option>WPR121 </option>
+                                <option>INF122 </option>
+                                <option>NS122 </option>
+                                <option>PRG122 </option>
+                                <option>WPR221 </option>
+                                <option>STA221 </option>
+                                <option>PRG221 </option>
+                                <option>MAT221 </option>
+                                <option>ORS221</option>
+                                <option>MPR221 </option>
+                                <option>MUL221 </option>
+                                <option>SPM321 </option>
+                                <option>DBD221 </option>
+                                <option>DBD321 </option>
+                                <option>DBD321 </option>
+                                <option>PRG321 </option>
+                                <option>ORS321 </option>
+                                <option>PRP321 </option>
+                                <option>RSH321 </option>
+                                <option>SAD321 </option>
+                                <option>SEN321 </option>
+                            </select>
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label>Year Employed:</label>
+                            <select id="txtYearEmployed">
+                                <option>--Please Select--</option>
+                                <option>2000</option>
+                                <option>2001</option>
+                                <option>2002</option>
+                                <option>2003</option>
+                                <option>2004</option>
+                                <option>2005</option>
+                                <option>2006</option>
+                                <option>2007</option>
+                                <option>2008</option>
+                                <option>2009</option>
+                                <option>2010</option>
+                                <option>2011</option>
+                                <option>2012</option>
+                                <option>2013</option>
+                                <option>2014</option>
+                                <option>2015</option>
+                                <option>2016</option>
+                                <option>2017</option>
+                                <option>2018</option>
+                            </select>
+                        </div>
+                        <br />
+
+                        <div class="form-group">
+                            <label>Lecturer Level:</label>
+                            <input class="form-control" name="txtLecturerLevel" />
+                        </div>
+
+                        <br />
+                        <div class="form-group">
+                            <label>CellPhone:</label>
+                            <input class="form-control" name="txtCellPhone" placeholder="Enter Phone number" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label>Email:</label>
+                            <input class="form-control" name="txtEmail" placeholder="Enter email" />
+                        </div>
+                        <br />
+                        <input id="btnEnter" type="submit" value="submit" />
+                        <input id="Reset1" type="reset" value="reset" />
+
+                    </fieldset>
+                </div>
+            </section>
+        </div>
+
+        <footer><p>Belgium Campus</p></footer>
+
+    </div>
+}

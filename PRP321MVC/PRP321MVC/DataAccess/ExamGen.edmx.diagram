@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ecd461b398bc4667a3ce18a50a755c3d" Name="Diagram1">
+        <EntityTypeShape EntityType="ExamGenModel.Account" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.Answer" Width="1.5" PointX="9.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.Choice" Width="1.5" PointX="9.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.Course" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.CourseSubject" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.Exam" Width="1.5" PointX="5.25" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.Lecturer" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.LecturerCourseSubject" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.Outcome" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.OutcomeDetail" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.PracticalWeight" Width="1.5" PointX="9.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.Question" Width="1.5" PointX="7.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.QuestionsType" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamGenModel.Subject" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="ExamGenModel.FK__Lecturer__Accoun__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__Answer__question__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__Choices__Questio__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__CourseSub__IdCou__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__CourseSub__Subje__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__LecturerC__Cours__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__Exam__LecturerID__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__LecturerC__Lectu__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__Outcome__Subject__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__OutcomeDe__Outco__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__Question__Outcom__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__Practical__Quest__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamGenModel.FK__Question__Questi__34C8D9D1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

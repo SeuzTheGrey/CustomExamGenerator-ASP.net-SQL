@@ -1,0 +1,47 @@
+﻿@model PRP321MVC.Models.QuestionModel
+
+@{
+    ViewBag.Title = "InsertDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>InsertDetails</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>@Html.TextBoxFor(x => x.Questions)</td>
+        </tr>
+        <tr>
+            <td>Outcome Details ID</td>
+            <td>@Html.TextBoxFor(x => x.OutcomeDetailsId)</td>
+        </tr>
+        <tr>
+            <td>Question Type ID</td>
+            <td>@Html.TextBoxFor(x => x.QuestionTypeId)</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>@Html.TextAreaFor(x => x.Weight)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input id="Submit" type="submit" value="submit" /></td>
+        </tr>
+    </table>
+}
+
+@{
+    if ((string)ViewData["result"] == "Successfully Inserted")
+    {
+        <script type="text/javascript" language="javascript">
+            alert("Successfully Inserted")
+        </script>
+    }
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Admin", "Admin")
+</div>

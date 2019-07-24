@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "SelectTestNumber";
+}
+
+@model PRP321MVC.Models.SubjectModel
+
+<section id="testTypeSelection" class="card-body">
+    <p>Select the Test Type:</p>
+    @using (Html.BeginForm("SelectNumberOfQuestions", "Generator", "Post"))
+    {
+        <select id="slctTestType" title="Test Type" name="TestType">
+
+            @for (int i = 1; i <= Model.Duration + 1; i++)
+            {
+                if (i == Model.Duration)
+                {
+                    <option>Summative</option>
+                }
+                else if (i == Model.Duration + 1)
+                {
+                    <option>Exam</option>
+                }
+                else
+                {
+                    <option>CT @i</option>
+                }
+            }
+
+        </select>
+        <br />
+        <button type="submit">Submit Test Type</button>
+    }
+</section>

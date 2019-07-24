@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Register";
+}
+@Styles.Render("~/Content/CustomStyles/Register.css")
+<section>
+    @using (Html.BeginForm("ReturnToRegisterIndex", "Admin", "Post"))
+    {
+        <section class="form-row Section">
+            <section class="form-group col-md-6">
+                <input type="text" placeholder="Username" name="Username" />
+            </section>
+            <section class="form-group col-md-6">
+                <input type="password" placeholder="Password" name="Password" />
+            </section>
+        </section>
+        <section class="form-row Section">
+            <section class="form-group col-md-6">
+                <label>Account Priority</label><input type="number" min="1" max="20" value="1" name="Priority" />
+            </section>
+            <section class="form-group col-md-6">
+                <label>Is Adminstrator</label><input type="checkbox" value=1 name="Adminstrator" />
+            </section>
+        </section>
+        <section id="OptionalHeader">
+            <label>Additional Data</label>
+        </section>
+        <section class="form-row Section">
+            <section class="form-group col-md-6">
+                <input type="text" placeholder="First Name" name="FirstName" />
+            </section>
+            <section class="form-group col-md-6">
+                <input type="text" placeholder="Last Name" name="LastName" />
+            </section>
+        </section>
+        <section class="form-row Section">
+            <section class="form-group col-md-6">
+                <label>Professional Level</label><input type="number" min="1" max="20" value="1" name="ProfessionalLevel" />
+            </section>
+            <section class="form-group col-md-6">
+                <input type="text" placeholder="Phone Number" name="Phone" />
+            </section>
+        </section>
+        <section class="form-row Section">
+            <section class="form-group col-md-6">
+                <input type="text" placeholder="Email" name="Email" />
+            </section>
+        </section>
+        <button id="Button" type="submit">Register</button>
+        @Html.ActionLink("Back", "Admin")
+    }
+    <br />
+
+
+
+</section>
+
+    
+
+

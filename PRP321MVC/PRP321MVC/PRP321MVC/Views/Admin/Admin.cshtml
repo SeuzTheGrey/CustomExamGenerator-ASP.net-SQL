@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+    PRP321MVC.Models.LecturerModel lecturer = Session["USER"] as PRP321MVC.Models.LecturerModel;
+}
+@Styles.Render("~/Content/CustomStyles/Admin.css")
+<section>
+    @if (lecturer.Priority >=7)
+    {
+        @Html.ActionLink("View All Users", "SelectAllUsers")
+    }
+</section>
+<section>
+    @if (lecturer.Priority >= 10)
+    {
+        @Html.ActionLink("Register User", "Register")
+    }
+</section>
+<section>
+    @if (lecturer.Priority >= 5)
+    {
+        @Html.ActionLink("Insert Question", "InsertDetails", "InsertQuestion")
+    }
+</section>
+<section>
+    @if (lecturer.Priority >= 5)
+    {
+        @Html.ActionLink("Insert Answer", "NewAnswer")
+    }
+</section>

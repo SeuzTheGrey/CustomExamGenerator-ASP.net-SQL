@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "ShowProfileLect";
+}
+
+@model List<MvcApplication1.Models.Lecturer>
+<div class="container">
+    <table class="table table-bordered">
+        <thread>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>ProfessionalLevel</th>
+                <th>LecturerCourseEndDate</th>
+            </tr>
+        </thread>
+        <tbody>
+            @for (int i = 0; i < Model.Count(); i++)
+            {
+                <tr>
+                    <td>@Model[i].LecturerName              </td>
+                    <td>@Model[i].LecturerSurname           </td>
+                    <td>@Model[i].LecturerEmail             </td>
+                    <td>@Model[i].LecturerProfessionalLevel </td>
+                    <td>@Model[i].LecturerEmploymentDate    </td>
+                    <td>@Model[i].LecturerContactNumber     </td>
+                    <td>
+                        <a href="@Url.Action("Delete", new { id = Model[i].LecturerID })"><i class="glyphicon glyphicon-trash"></i>  </a>
+                        <a href="" @Url.Action("Edit", new { id = Model[i].LecturerID }) ""><i class="glyphicon glyphicon-edit"></i>   </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+</div>

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<PRP321MVC.Models.DownloadFile>
+@{
+    ViewBag.Title = "Create";
+}
+@Scripts.Render("~/Content/CustomStyles/css")
+@Styles.Render("~/Content/CustomStyles/Admin.css")
+
+@Html.ActionLink("Begin Create Exam", "SelectSubjects")
+
+
+@*<section>
+
+    <table>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Model => Model.fileName)
+            </th>
+            <th>
+                <label>Download File</label>
+            </th>
+        </tr>
+        @foreach (PRP321MVC.Models.DownloadFile item in Model)
+        {
+            <tr>
+                <td>
+                    @item.fileName
+                </td>
+                <td>
+                    @Html.ActionLink("Download","DownloadFile", new { id = item.filePath })
+                </td>
+            </tr>
+        }
+    </table>
+
+</section>*@
+
+@*<section id="examCreation" class="card">
+        <form>
+
+
+
+
+
+            <hr id="seperatorTop">
+            <section id="outcomeSelection" class="card-body">
+                <label for="outcomeContainer">Learning Outcomes:</label>
+                <section class="container" id="outcomeContainer">
+                    <input type="checkbox" /> Learning Outcome 1: Example Title <br />
+                    <input type="checkbox" /> Learning Outcome 2: Example Title <br />
+                    <input type="checkbox" /> Learning Outcome 3: Example Title <br />
+                    <input type="checkbox" /> Learning Outcome 4: Example Title <br />
+                    <input type="checkbox" /> Learning Outcome 5: Example Title <br />
+                </section>
+            </section><hr id="seperatorMid">
+            <section id="sectionSetup" class="card-body">
+                Number of Questions for Section (between 1 and 20):
+                <input type="number" name="quantity" min="1" max="20" value="1">
+                <input type="submit" value="Add Section">
+                <div id="sectionsList">
+                    <p>Section 1: 5 Questions</p>
+                    <p>Section 2: 20 Questions</p>
+                </div>
+                <p>Select the Moderator for the Test:</p>
+                <select id="slctModerator" title="Moderator">
+                    <option selected disabled>Moderator...</option>
+                    <option>Hein Schoeman</option>
+                    <option>Francois Venter</option>
+                    <option>Gift Mudare</option>
+                </select>
+            </section>
+            <input id="btnGenerate" type="submit" value="Generate Test">
+        </form>
+    </section>*@
+@*<section id="examEditing" class="card">
+        <section id="Page1">
+            Content of page 1 (Not working at this moment)
+            <a href="/create-and-edit" onclick="return show('Page2','Page1');">Next Page</a>
+        </section>
+        <section id="Page2" style="display:none">
+            Content of page 2
+            <a href="/create-and-edit" onclick="return show('Page1','Page2');">Previous Page</a>
+        </section>
+    </section>*@
+
